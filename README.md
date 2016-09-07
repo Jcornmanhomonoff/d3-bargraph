@@ -1,2 +1,1 @@
-D3 Challenge 2016
-TESTING TESTING PLZ WORK
+D3 Challenge
