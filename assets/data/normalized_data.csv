@@ -1,0 +1,79 @@
+question_group,segment,technology,label,percent
+Ownership,Males,Laptop,93%
+Ownership,Males,Tablet,91%
+Ownership,Males,Mobile,70%
+Ownership,Females,Laptop,92%
+Ownership,Females,Tablet,89%
+Ownership,Females,Mobile,65%
+Usage,Males,Laptop,Traveling,42%
+Usage,Males,Laptop,Commuting,4%
+Usage,Males,Laptop,Shopping,3%
+Usage,Males,Laptop,Outdoors,5%
+Usage,Males,Laptop,Restaurant,15%
+Usage,Males,Laptop,School,27%
+Usage,Males,Laptop,Work,36%
+Usage,Males,Laptop,Home,90%
+Usage,Females,Laptop,Traveling,25%
+Usage,Females,Laptop,Commuting,7%
+Usage,Females,Laptop,Shopping,4%
+Usage,Females,Laptop,Outdoors,14%
+Usage,Females,Laptop,Restaurant,15%
+Usage,Females,Laptop,School,18%
+Usage,Females,Laptop,Work,35%
+Usage,Females,Laptop,Home,62%
+Usage,Males,Tablet,Traveling,37%
+Usage,Males,Tablet,Commuting,4%
+Usage,Males,Tablet,Shopping,6%
+Usage,Males,Tablet,Outdoors,9%
+Usage,Males,Tablet,Restaurant,20%
+Usage,Males,Tablet,School,27%
+Usage,Males,Tablet,Work,35%
+Usage,Males,Tablet,Home,94%
+Usage,Females,Tablet,Traveling,35%
+Usage,Females,Tablet,Commuting,3%
+Usage,Females,Tablet,Shopping,3%
+Usage,Females,Tablet,Outdoors,10%
+Usage,Females,Tablet,Restaurant,27%
+Usage,Females,Tablet,School,12%
+Usage,Females,Tablet,Work,28%
+Usage,Females,Tablet,Home,63%
+Usage,Males,Mobile,Traveling,65%
+Usage,Males,Mobile,Commuting,34%
+Usage,Males,Mobile,Shopping,72%
+Usage,Males,Mobile,Outdoors,58%
+Usage,Males,Mobile,Restaurant,71%
+Usage,Males,Mobile,School,39%
+Usage,Males,Mobile,Work,63%
+Usage,Males,Mobile,Home,46%
+Usage,Females,Mobile,Traveling,63%
+Usage,Females,Mobile,Commuting,36%
+Usage,Females,Mobile,Shopping,29%
+Usage,Females,Mobile,Outdoors,47%
+Usage,Females,Mobile,Restaurant,70%
+Usage,Females,Mobile,School,59%
+Usage,Females,Mobile,Work,27%
+Usage,Females,Mobile,Home,62%
+Which Room,Males,Laptop,Bedroom,70%
+Which Room,Males,Laptop,Home Office,42%
+Which Room,Males,Laptop,Living Room,63%
+Which Room,Males,Laptop,Kitchen,68%
+Which Room,Males,Tablet,Bedroom,66%
+Which Room,Males,Tablet,Home Office,52%
+Which Room,Males,Tablet,Living Room,45%
+Which Room,Males,Tablet,Kitchen,55%
+Which Room,Males,Mobile,Bedroom,49%
+Which Room,Males,Mobile,Home Office,41%
+Which Room,Males,Mobile,Living Room,42%
+Which Room,Males,Mobile,Kitchen,67%
+Which Room,Females,Laptop,Bedroom,55%
+Which Room,Females,Laptop,Home Office,54%
+Which Room,Females,Laptop,Living Room,54%
+Which Room,Females,Laptop,Kitchen,54%
+Which Room,Females,Tablet,Bedroom,56%
+Which Room,Females,Tablet,Home Office,52%
+Which Room,Females,Tablet,Living Room,62%
+Which Room,Females,Tablet,Kitchen,65%
+Which Room,Females,Mobile,Bedroom,46%
+Which Room,Females,Mobile,Home Office,46%
+Which Room,Females,Mobile,Living Room,70%
+Which Room,Females,Mobile,Kitchen,69%
