@@ -6,15 +6,8 @@ let margin = {
     bottom: 100,
     left: 75
   },
-  width = 840 - margin.left - margin.right,
+  width = 1500 - margin.left - margin.right,
   height = 700 - margin.top - margin.bottom;
-
-// let tip = d3.tip()
-//   .attr('class', 'd3-tip')
-//   .offset([-10, 0])
-//   .html(function(d) {
-//     return "<strong>Percent:</strong> <span style='color:red'>" + d.percent + "</span>";
-//   });
 
 //create svg
 let svg = d3.select("#graph").append("svg")
@@ -24,19 +17,18 @@ let svg = d3.select("#graph").append("svg")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // svg.call(tip);
-
-d3.csv("assets/data/ownership.csv", function(data) {
-  let headers = ["Female", "Male"];
+d3.json('http://api.population.io/1.0/population/1950/United%20States/', function (data){
+  let headers = ["Female"];
 
   //explicit return of object with x & y
   //d3 requires x, y, & y0
   //each block takes 2 y values to map blocks on top of one another
   //d3.layout.stack returns y0
-  let layers = d3.layout.stack()(headers.map(function(percent) {
+  let layers = d3.layout.stack()(headers.map(function(total) {
     return data.map(function(d) {
       return {
-        x: d.technology,
-        y: +d.percent
+        x: d.age,
+        y: +d.total
       };
     });
   }));
@@ -63,10 +55,10 @@ d3.csv("assets/data/ownership.csv", function(data) {
   //set color range
   let color = d3.scale.ordinal()
     .domain(headers)
-    .range(["rgb(0, 255, 224)", "rgb(91, 90, 89)"]);
+    .range(["rgb(0, 255, 224)"]);
 
 
-  //creating axis & making char
+  //creating axis & making chart
   let xAxis = d3.svg.axis()
     .scale(xScale)
     .tickSize(0)
@@ -85,9 +77,9 @@ d3.csv("assets/data/ownership.csv", function(data) {
     .call(xAxis)
     .selectAll("text").style("text-anchor", "end")
     .attr("dx", "-.8em") //move labels down from line
-    .attr("dy", ".15em")
+    .attr("dy", "-1em")
     .attr("transform", function(d) {
-      return "rotate(-45)"; //flip labels
+      return "rotate(-90)"; //flip labels
     });
 
   //creating y axis
@@ -103,7 +95,7 @@ d3.csv("assets/data/ownership.csv", function(data) {
     })
     .attr("dy", ".75em")
     .style("text-anchor", "end")
-    .text("Percentage");
+    .text("Total");
 
 
 
@@ -131,7 +123,7 @@ d3.csv("assets/data/ownership.csv", function(data) {
 
   rect.transition()
     .delay(function(d, i) {
-      return i * 200; //speed of transition
+      return i * 100; //speed of transition
     })
     .attr("y", function(d) {
       return y(d.y0 + d.y);
@@ -164,34 +156,4 @@ d3.csv("assets/data/ownership.csv", function(data) {
     .text(function(d) {
       return d;
     });
-
-  // legend.append("svg:foreignObject")
-  //   .attr("x", width - 24)
-  //   .attr("y", 9)
-  //   .attr("dy", ".35em")
-  //   .style("text-anchor", "end") //moves text to side of blocks
-  //   .append("xhtml:span")
-  //   .attr("class", "control glyphicon glyphicon-zoom-in");
-
-  // svg.selectAll(".bar")
-  //   .data(data)
-  //   .enter().append("rect")
-  //   .attr("class", "bar")
-  //   .attr("x", function(d) {
-  //     return x(d.technology);
-  //   })
-  //   .attr("width", x.rangeBand())
-  //   .attr("y", function(d) {
-  //     return y(+d.percent);
-  //   })
-  //   .attr("height", function(d) {
-  //     return height - y(+d.percent);
-  //   })
-  //   .on('mouseover', tip.show)
-  //   .on('mouseout', tip.hide);
 });
-
-// function type(d) {
-//   d.percent = +d.percent;
-//   return d;
-// }
